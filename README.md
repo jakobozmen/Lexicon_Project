@@ -1,32 +1,26 @@
-# Lexicon Project
+# Jakob Özmen – IT-portfolio
 
-En responsiv testsida byggd med **HTML, CSS och JavaScript**. Projektet började som ett GitHub Desktop-test och har utvecklats till en liten, interaktiv frontend-demo.
+Personlig portfolio med presentation, projekt och kompetenser inom IT-support och systemutveckling.
+
+**Webbadress (efter merge till main):** https://jakobozmen.github.io/Lexicon_Project/
 
 ## Funktioner
+- Responsiv HTML/CSS-design
+- Temaväxling, mörkt och ljust läge
+- Projektfiltrering: alla, webb och databas
+- Stöd för tangentbordsnavigering och minskad rörelse
+- Statisk sida utan ramverk
 
-- Responsiv layout för mobil, surfplatta och dator.
-- Ljust/mörkt tema som sparas i webbläsaren.
-- Klickräknare med återställning och lokal lagring.
-- Semantisk HTML, tangentbordsnavigering och stöd för minskad rörelse.
-- Inga externa bibliotek eller ramverk.
+## Projekt
+- [Gävle Sjukhus – Access/VBA](https://github.com/jakobozmen/gavle-sjukhus-access-database) – relationsdatabas, formulär och rapporter
+- [Lexicon Frontend](https://github.com/jakobozmen/Lexicon_Project) – HTML, CSS och JavaScript
+- Vargobservationer i Gävleborg – kursprojekt i Leaflet och Supabase, ännu utan publik demo
 
-## Starta lokalt
+## Starta
+Öppna `index.html` i en webbläsare. Ingen installation krävs.
 
-1. Klona projektet eller ladda ned filerna.
-2. Öppna **index.html** i en webbläsare.
-
-Ingen server eller installation krävs.
-
-## Filer
-
-- **index.html** – sidans struktur och innehåll.
-- **style.css** – layout, färger och responsiv design.
-- **script.js** – tema, klickräknare och lokal lagring.
+## Underhåll
+Ändra projektkort i `index.html`. Attributet `data-category` styr filtreringen.
 
 ## Integritet
-
-Inga klickdata skickas till någon server. Temaval och antal klick lagras endast lokalt med webbläsarens localStorage.
-
-## Publicering
-
-Sidan kan publiceras med GitHub Pages när du själv vill aktivera det.
+Endast temaval lagras lokalt via localStorage. Inga personliga kontaktuppgifter eller analysverktyg ingår.
