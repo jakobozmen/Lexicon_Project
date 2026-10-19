@@ -1,24 +1,122 @@
-<!DOCTYPE html>
-<html lang="sv">
+<!doctype html>
+<html lang="sv" data-theme="dark">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>GitHub Clone Test</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Lexicon Project – en responsiv webbsida med HTML, CSS och JavaScript.">
+  <meta name="theme-color" content="#0b1020">
+  <title>Lexicon Project | Frontend-labb</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
 </head>
-
 <body>
+  <a class="skip-link" href="#main">Hoppa till innehållet</a>
+  <header class="site-header">
+    <div class="container navbar">
+      <a class="brand" href="#start" aria-label="Lexicon Project, till toppen">
+        <span class="brand-logo" aria-hidden="true">&lt;/&gt;</span>
+        LEXICON <strong>PROJECT</strong>
+      </a>
+      <nav aria-label="Huvudmeny" class="nav-links">
+        <a href="#om">Om projektet</a>
+        <a href="#tekniker">Tekniker</a>
+        <a href="#demo">Testa själv</a>
+      </nav>
+      <button type="button" class="theme-toggle" id="theme-toggle" aria-label="Växla till ljust tema" aria-pressed="false">☀ Ljust läge</button>
+    </div>
+  </header>
 
-    <h1>GitHub Desktop Test</h1>
+  <main id="main">
+    <section class="hero container" id="start" aria-labelledby="hero-title">
+      <div class="hero-text">
+        <p class="eyebrow"><span class="online-dot" aria-hidden="true"></span> FRONTEND-LABB · GITHUB</p>
+        <h1 id="hero-title">Från första testet till <span class="accent-text">en riktig webbsida.</span></h1>
+        <p class="intro">Det här projektet började som ett enkelt test av GitHub Desktop. Nu är det en responsiv webbsida med modern design, tydlig kod och interaktiva funktioner.</p>
+        <div class="actions">
+          <a href="#demo" class="btn btn-primary">Testa funktionen <span aria-hidden="true">↗</span></a>
+          <a href="https://github.com/jakobozmen/Lexicon_Project" target="_blank" rel="noopener noreferrer" class="btn btn-outline">Se koden på GitHub <span aria-hidden="true">↗</span></a>
+        </div>
+        <div class="tags" aria-label="Projektets tekniker"><span>HTML5</span><span>CSS3</span><span>JavaScript</span><span>Git</span></div>
+      </div>
 
-    <p>Det här är min testsida för GitHub Desktop.</p>
+      <div class="editor" aria-label="Exempel på JavaScript-kod">
+        <div class="editor-header">
+          <span class="dots" aria-hidden="true"><i></i><i></i><i></i></span>
+          <span>script.js</span>
+          <span class="editor-type">VANILLA JS</span>
+        </div>
+        <div class="editor-code">
+          <div><span class="line">01</span><code><em>const</em> button =</code></div>
+          <div><span class="line">02</span><code>  document.<b>querySelector</b>(</code></div>
+          <div><span class="line">03</span><code>    <mark>'#increment-btn'</mark>);</code></div>
+          <div><span class="line">04</span><code></code></div>
+          <div><span class="line">05</span><code>button.<b>addEventListener</b>(</code></div>
+          <div><span class="line">06</span><code>  <mark>'click'</mark>, () =&gt; {</code></div>
+          <div><span class="line">07</span><code>    <small>// Här händer något!</small></code></div>
+          <div><span class="line">08</span><code>  });</code></div>
+        </div>
+        <div class="editor-footer"><span class="online-dot" aria-hidden="true"></span> Redo att köras i webbläsaren</div>
+      </div>
+    </section>
 
-    <button onclick="visaMeddelande()">Klicka här</button>
+    <section id="om" class="section tinted" aria-labelledby="about-title">
+      <div class="container">
+        <div class="section-intro">
+          <p class="section-label">01 / OM PROJEKTET</p>
+          <h2 id="about-title">En bättre grund att bygga vidare på.</h2>
+          <p>Små, tydliga förbättringar som gör skillnad när ett testprojekt växer.</p>
+        </div>
+        <div class="features">
+          <article class="feature"><span class="feature-icon" aria-hidden="true">▣</span><h3>Responsiv design</h3><p>Layouten anpassar sig efter mobil, surfplatta och dator.</p></article>
+          <article class="feature"><span class="feature-icon" aria-hidden="true">{ }</span><h3>Renare struktur</h3><p>HTML, CSS och JavaScript ligger i separata filer som är enkla att utveckla.</p></article>
+          <article class="feature"><span class="feature-icon" aria-hidden="true">✦</span><h3>Riktig interaktion</h3><p>Temaväxling och en klickräknare visar hur JavaScript fungerar.</p></article>
+        </div>
+      </div>
+    </section>
 
-    <script>
-        function visaMeddelande() {
-            alert("GitHub repository fungerar!");
-        }
-    </script>
+    <section id="tekniker" class="section" aria-labelledby="tech-title">
+      <div class="container split">
+        <div class="section-intro">
+          <p class="section-label">02 / TEKNIKER</p>
+          <h2 id="tech-title">Byggt med webbens grunder.</h2>
+          <p>Inga ramverk eller paket krävs. Sidan fungerar direkt i webbläsaren.</p>
+        </div>
+        <div class="skill-list" aria-label="Tekniker i projektet">
+          <div><span>01</span><strong>HTML5</strong><small>Semantisk struktur</small></div>
+          <div><span>02</span><strong>CSS3</strong><small>Responsiv layout</small></div>
+          <div><span>03</span><strong>JavaScript</strong><small>Interaktion och lagring</small></div>
+          <div><span>04</span><strong>Git &amp; GitHub</strong><small>Versionshantering</small></div>
+        </div>
+      </div>
+    </section>
 
+    <section id="demo" class="section tinted" aria-labelledby="demo-title">
+      <div class="container split">
+        <div class="section-intro">
+          <p class="section-label">03 / TESTA SJÄLV</p>
+          <h2 id="demo-title">Se JavaScript i arbete.</h2>
+          <p>Klicka på knappen för att öka räknaren. Resultatet sparas lokalt i din webbläsare.</p>
+          <p class="hint">Tips: Prova också knappen för ljust och mörkt läge högst upp.</p>
+        </div>
+        <div class="demo-card">
+          <span class="demo-label">ANTAL KLICK</span>
+          <output id="click-count" class="counter" aria-live="polite" aria-atomic="true">0</output>
+          <div class="actions centered">
+            <button type="button" class="btn btn-primary" id="increment-btn">+ Klicka här</button>
+            <button type="button" class="btn btn-outline" id="reset-btn">Återställ</button>
+          </div>
+          <p class="demo-message" id="counter-message" role="status">Räknaren är redo.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <span>© <span id="current-year">2026</span> Lexicon Project</span>
+      <span>Byggt med HTML, CSS och JavaScript.</span>
+      <a href="https://github.com/jakobozmen/Lexicon_Project" target="_blank" rel="noopener noreferrer">GitHub ↗</a>
+    </div>
+  </footer>
 </body>
 </html>
