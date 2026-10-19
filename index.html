@@ -3,120 +3,151 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Lexicon Project – en responsiv webbsida med HTML, CSS och JavaScript.">
-  <meta name="theme-color" content="#0b1020">
-  <title>Lexicon Project | Frontend-labb</title>
+  <meta name="theme-color" content="#0b1220">
+  <meta name="description" content="Jakob Özmen – IT-support, .NET-studier och projekt inom webbutveckling och databaser.">
+  <meta property="og:title" content="Jakob Özmen | IT & Systemutveckling">
+  <meta property="og:description" content="Se mina projekt inom IT, webbutveckling och databaser.">
+  <title>Jakob Özmen | IT & Systemutveckling</title>
   <link rel="stylesheet" href="style.css">
   <script src="script.js" defer></script>
 </head>
 <body>
-  <a class="skip-link" href="#main">Hoppa till innehållet</a>
+  <a href="#main" class="skip-link">Hoppa till innehållet</a>
   <header class="site-header">
-    <div class="container navbar">
-      <a class="brand" href="#start" aria-label="Lexicon Project, till toppen">
-        <span class="brand-logo" aria-hidden="true">&lt;/&gt;</span>
-        LEXICON <strong>PROJECT</strong>
-      </a>
-      <nav aria-label="Huvudmeny" class="nav-links">
-        <a href="#om">Om projektet</a>
-        <a href="#tekniker">Tekniker</a>
-        <a href="#demo">Testa själv</a>
+    <div class="container nav">
+      <a href="#start" class="logo" aria-label="Jakob Özmen, till startsidan"><span class="logo-icon">J<span>.</span></span> JAKOB <strong>ÖZMEN</strong></a>
+      <nav class="nav-links" aria-label="Huvudmeny">
+        <a href="#projekt">Projekt</a><a href="#om">Om mig</a><a href="#kompetens">Kompetens</a><a href="#kontakt">Kontakt</a>
       </nav>
-      <button type="button" class="theme-toggle" id="theme-toggle" aria-label="Växla till ljust tema" aria-pressed="false">☀ Ljust läge</button>
+      <button class="theme-toggle" id="theme-toggle" type="button" aria-label="Byt till ljust tema" aria-pressed="false"><span id="theme-icon" aria-hidden="true">☀</span> <span id="theme-label">Ljust läge</span></button>
     </div>
   </header>
-
   <main id="main">
     <section class="hero container" id="start" aria-labelledby="hero-title">
-      <div class="hero-text">
-        <p class="eyebrow"><span class="online-dot" aria-hidden="true"></span> FRONTEND-LABB · GITHUB</p>
-        <h1 id="hero-title">Från första testet till <span class="accent-text">en riktig webbsida.</span></h1>
-        <p class="intro">Det här projektet började som ett enkelt test av GitHub Desktop. Nu är det en responsiv webbsida med modern design, tydlig kod och interaktiva funktioner.</p>
-        <div class="actions">
-          <a href="#demo" class="btn btn-primary">Testa funktionen <span aria-hidden="true">↗</span></a>
-          <a href="https://github.com/jakobozmen/Lexicon_Project" target="_blank" rel="noopener noreferrer" class="btn btn-outline">Se koden på GitHub <span aria-hidden="true">↗</span></a>
+      <div class="hero-copy">
+        <p class="eyebrow"><span class="dot"></span> IT & SYSTEMUTVECKLING <span class="muted">/ JÖNKÖPING</span></p>
+        <p class="hello">Hej, jag heter Jakob.</p>
+        <h1 id="hero-title">Teknik som <em>fungerar.</em><br>Och känns enkel.</h1>
+        <p class="lead">Jag är <strong>Jakob Özmen</strong> och studerar till fullstack systemutvecklare .NET på Lexicon. Med erfarenhet av IT-support hos GameEffect kombinerar jag programmering, problemlösning och ett starkt servicefokus.</p>
+        <div class="buttons">
+          <a class="button primary" href="#projekt">Mina projekt <span aria-hidden="true">↗</span></a>
+          <a class="button secondary" href="#kontakt">Kontakta mig <span aria-hidden="true">↗</span></a>
         </div>
-        <div class="tags" aria-label="Projektets tekniker"><span>HTML5</span><span>CSS3</span><span>JavaScript</span><span>Git</span></div>
+        <div class="tags" aria-label="Mina inriktningar"><span>.NET-utveckling</span><span>IT-support</span><span>Webbutveckling</span></div>
       </div>
-
-      <div class="editor" aria-label="Exempel på JavaScript-kod">
-        <div class="editor-header">
-          <span class="dots" aria-hidden="true"><i></i><i></i><i></i></span>
-          <span>script.js</span>
-          <span class="editor-type">VANILLA JS</span>
-        </div>
-        <div class="editor-code">
-          <div><span class="line">01</span><code><em>const</em> button =</code></div>
-          <div><span class="line">02</span><code>  document.<b>querySelector</b>(</code></div>
-          <div><span class="line">03</span><code>    <mark>'#increment-btn'</mark>);</code></div>
-          <div><span class="line">04</span><code></code></div>
-          <div><span class="line">05</span><code>button.<b>addEventListener</b>(</code></div>
-          <div><span class="line">06</span><code>  <mark>'click'</mark>, () =&gt; {</code></div>
-          <div><span class="line">07</span><code>    <small>// Här händer något!</small></code></div>
-          <div><span class="line">08</span><code>  });</code></div>
-        </div>
-        <div class="editor-footer"><span class="online-dot" aria-hidden="true"></span> Redo att köras i webbläsaren</div>
-      </div>
-    </section>
-
-    <section id="om" class="section tinted" aria-labelledby="about-title">
-      <div class="container">
-        <div class="section-intro">
-          <p class="section-label">01 / OM PROJEKTET</p>
-          <h2 id="about-title">En bättre grund att bygga vidare på.</h2>
-          <p>Små, tydliga förbättringar som gör skillnad när ett testprojekt växer.</p>
-        </div>
-        <div class="features">
-          <article class="feature"><span class="feature-icon" aria-hidden="true">▣</span><h3>Responsiv design</h3><p>Layouten anpassar sig efter mobil, surfplatta och dator.</p></article>
-          <article class="feature"><span class="feature-icon" aria-hidden="true">{ }</span><h3>Renare struktur</h3><p>HTML, CSS och JavaScript ligger i separata filer som är enkla att utveckla.</p></article>
-          <article class="feature"><span class="feature-icon" aria-hidden="true">✦</span><h3>Riktig interaktion</h3><p>Temaväxling och en klickräknare visar hur JavaScript fungerar.</p></article>
-        </div>
-      </div>
-    </section>
-
-    <section id="tekniker" class="section" aria-labelledby="tech-title">
-      <div class="container split">
-        <div class="section-intro">
-          <p class="section-label">02 / TEKNIKER</p>
-          <h2 id="tech-title">Byggt med webbens grunder.</h2>
-          <p>Inga ramverk eller paket krävs. Sidan fungerar direkt i webbläsaren.</p>
-        </div>
-        <div class="skill-list" aria-label="Tekniker i projektet">
-          <div><span>01</span><strong>HTML5</strong><small>Semantisk struktur</small></div>
-          <div><span>02</span><strong>CSS3</strong><small>Responsiv layout</small></div>
-          <div><span>03</span><strong>JavaScript</strong><small>Interaktion och lagring</small></div>
-          <div><span>04</span><strong>Git &amp; GitHub</strong><small>Versionshantering</small></div>
-        </div>
-      </div>
-    </section>
-
-    <section id="demo" class="section tinted" aria-labelledby="demo-title">
-      <div class="container split">
-        <div class="section-intro">
-          <p class="section-label">03 / TESTA SJÄLV</p>
-          <h2 id="demo-title">Se JavaScript i arbete.</h2>
-          <p>Klicka på knappen för att öka räknaren. Resultatet sparas lokalt i din webbläsare.</p>
-          <p class="hint">Tips: Prova också knappen för ljust och mörkt läge högst upp.</p>
-        </div>
-        <div class="demo-card">
-          <span class="demo-label">ANTAL KLICK</span>
-          <output id="click-count" class="counter" aria-live="polite" aria-atomic="true">0</output>
-          <div class="actions centered">
-            <button type="button" class="btn btn-primary" id="increment-btn">+ Klicka här</button>
-            <button type="button" class="btn btn-outline" id="reset-btn">Återställ</button>
+      <div class="hero-visual" aria-label="Illustration av en kodterminal med mina projekt">
+        <div class="terminal">
+          <div class="terminal-top"><span class="lights"><i></i><i></i><i></i></span><span>jakob / portfolio</span><b>● ONLINE</b></div>
+          <div class="terminal-content">
+            <p><span class="green">➜</span> <span class="blue">~/projects</span> whoami</p>
+            <div class="terminal-user"><small>UTVECKLARE I UTBILDNING</small><strong>Jakob Özmen</strong><span>.NET · JavaScript · SQL</span></div>
+            <p><span class="green">➜</span> <span class="blue">~/projects</span> ls</p>
+            <div class="terminal-projects"><span>gävle-sjukhus/</span><span>frontend/</span><span>vargobservationer/</span></div>
+            <p><span class="green">➜</span> <span class="blue">~/projects</span> <span class="cursor" aria-hidden="true"></span></p>
           </div>
-          <p class="demo-message" id="counter-message" role="status">Räknaren är redo.</p>
+          <div class="terminal-bottom"><span class="dot"></span> Bygger, lär och utvecklar</div>
+        </div>
+        <div class="floating-tag first" aria-hidden="true">✳ Problemlösning</div>
+        <div class="floating-tag second" aria-hidden="true">&lt;/&gt; Clean code</div>
+      </div>
+    </section>
+
+    <section class="section tinted" id="projekt" aria-labelledby="projects-title">
+      <div class="container">
+        <div class="section-header">
+          <div><p class="eyebrow">01 — UTVALDA ARBETEN</p><h2 id="projects-title">Projekt som visar <em>vad jag gör.</em></h2></div>
+          <p class="section-aside">Från relationsdatabaser till webbsidor. Här visar jag egna projekt och utbildningsarbeten.</p>
+        </div>
+        <div class="filter-bar" role="group" aria-label="Filtrera projekt">
+          <button type="button" class="filter active" data-filter="alla" aria-pressed="true">Alla projekt</button>
+          <button type="button" class="filter" data-filter="webb" aria-pressed="false">Webb</button>
+          <button type="button" class="filter" data-filter="databas" aria-pressed="false">Databas</button>
+        </div>
+        <div class="project-grid">
+          <article class="project-card" data-category="databas">
+            <div class="project-preview preview-db" aria-hidden="true">
+              <div class="db-window"><div class="db-side"><b>G+</b><i></i><i></i><i></i></div><div class="db-body"><small>GÄVLE SJUKHUS</small><strong>Patientöversikt</strong><div class="db-stats"><span></span><span></span><span></span></div><div class="db-lines"><i></i><i></i><i></i></div></div></div>
+              <span class="preview-label">ACCESS / VBA</span>
+            </div>
+            <div class="project-body">
+              <p class="project-type">01 / DATABAS · EGET PROJEKT</p>
+              <h3>Gävle Sjukhus</h3>
+              <p>Ett sjukhussystem i Microsoft Access med relationsdatabas, patient- och läkarregister, formulär, sökfunktioner, rapporter och PDF-export.</p>
+              <div class="pills"><span>Microsoft Access</span><span>VBA</span><span>SQL</span></div>
+              <a class="project-link" href="https://github.com/jakobozmen/gavle-sjukhus-access-database" target="_blank" rel="noopener noreferrer">Se projekt på GitHub <span aria-hidden="true">↗</span></a>
+            </div>
+          </article>
+          <article class="project-card" data-category="webb">
+            <div class="project-preview preview-web" aria-hidden="true">
+              <div class="web-window"><div class="web-header"><i></i><i></i><i></i><small>jakobozmen.github.io</small></div><div class="web-content"><small>FRONTEND / GITHUB</small><strong>Från idé till webbsida.</strong><span class="web-button"></span><div class="web-cards"><i></i><i></i><i></i></div></div></div>
+              <span class="preview-label">HTML / CSS / JS</span>
+            </div>
+            <div class="project-body">
+              <p class="project-type">02 / WEBB · EGET PROJEKT</p>
+              <h3>Lexicon Frontend</h3>
+              <p>En responsiv webbsida med HTML, CSS och JavaScript. Jag har arbetat med interaktiva funktioner, färgteman och publicering med GitHub Pages.</p>
+              <div class="pills"><span>HTML5</span><span>CSS3</span><span>JavaScript</span></div>
+              <a class="project-link" href="https://github.com/jakobozmen/Lexicon_Project" target="_blank" rel="noopener noreferrer">Se projekt på GitHub <span aria-hidden="true">↗</span></a>
+            </div>
+          </article>
+          <article class="project-card" data-category="webb">
+            <div class="project-preview preview-map" aria-hidden="true">
+              <div class="map-window"><div class="map-river"></div><div class="map-road"></div><span class="pin pin-a">●</span><span class="pin pin-b">●</span><span class="pin pin-c">●</span><div class="map-badge"><small>KARTPROJEKT</small><strong>Gävleborg</strong></div></div>
+              <span class="preview-label">LEAFLET / SUPABASE</span>
+            </div>
+            <div class="project-body">
+              <p class="project-type">03 / WEBB · KURSPROJEKT</p>
+              <h3>Vargobservationer i Gävleborg</h3>
+              <p>Ett utbildningsprojekt där jag arbetade med en interaktiv Leaflet-karta, Supabase, kommuner och observationer.</p>
+              <div class="pills"><span>JavaScript</span><span>Leaflet</span><span>Supabase</span></div>
+              <p class="not-public">Kursprojekt · ingen publik demo länkad</p>
+            </div>
+          </article>
+        </div>
+        <p id="filter-status" class="sr-only" role="status" aria-live="polite">Visar 3 projekt.</p>
+      </div>
+    </section>
+
+    <section class="section" id="om" aria-labelledby="about-title">
+      <div class="container about-grid">
+        <div>
+          <p class="eyebrow">02 — MIN BAKGRUND</p>
+          <h2 id="about-title">Support i grunden.<br><em>Utveckling framåt.</em></h2>
+          <p class="about-lead">Jag har arbetat med support och kundkontakt hos GameEffect. Där har jag kombinerat teknisk problemlösning med att hjälpa människor på ett tydligt och serviceinriktat sätt.</p>
+          <p class="body-muted">Nu studerar jag fullstack systemutveckling .NET genom Lexicon och utvecklar mina kunskaper inom programmering, databaser, webbteknik och versionshantering. Jag är intresserad av roller där teknik, samarbete och service möts.</p>
+          <a class="project-link" href="#kontakt">Ta kontakt med mig <span aria-hidden="true">↗</span></a>
+        </div>
+        <div class="facts">
+          <article><span class="fact-number">01</span><div><small>UTBILDNING</small><h3>Fullstack Systemutvecklare .NET</h3><p>Lexicon · pågående utbildning</p></div></article>
+          <article><span class="fact-number">02</span><div><small>ERFARENHET</small><h3>IT-support &amp; kundservice</h3><p>GameEffect · användarstöd och problemlösning</p></div></article>
+          <article><span class="fact-number">03</span><div><small>INTRESSEOMRÅDEN</small><h3>Utveckling &amp; IT-teknik</h3><p>Webb, databaser, system och användarnära teknik</p></div></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section tinted" id="kompetens" aria-labelledby="skills-title">
+      <div class="container">
+        <div class="section-header"><div><p class="eyebrow">03 — KUNSKAPER</p><h2 id="skills-title">Min tekniska <em>verktygslåda.</em></h2></div><p class="section-aside">Tekniker jag har använt i projekt eller håller på att fördjupa mig inom under utbildningen.</p></div>
+        <div class="skills">
+          <article><div class="skill-icon">&lt;/&gt;</div><h3>Frontend</h3><p>Webbgränssnitt, interaktion och responsiv layout.</p><div class="pills"><span>HTML</span><span>CSS</span><span>JavaScript</span></div></article>
+          <article><div class="skill-icon">#</div><h3>System &amp; databaser</h3><p>Databaser, automation och vidare studier inom .NET.</p><div class="pills"><span>C# / .NET (studier)</span><span>SQL</span><span>VBA</span><span>Access</span></div></article>
+          <article><div class="skill-icon">⌘</div><h3>Verktyg</h3><p>Versionshantering och tjänster för webbutveckling.</p><div class="pills"><span>Git</span><span>GitHub</span><span>Supabase</span><span>Leaflet</span></div></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section contact-section" id="kontakt" aria-labelledby="contact-title">
+      <div class="container">
+        <div class="contact-card">
+          <div><p class="eyebrow">04 — KONTAKT</p><h2 id="contact-title">Har du ett projekt eller en <em>IT-roll i åtanke?</em></h2><p>Jag är intresserad av möjligheter inom IT-support och systemutveckling. Du hittar mina projekt och min profil på GitHub.</p></div>
+          <a class="button primary" href="https://github.com/jakobozmen" target="_blank" rel="noopener noreferrer">Min GitHub-profil <span aria-hidden="true">↗</span></a>
         </div>
       </div>
     </section>
   </main>
 
   <footer class="site-footer">
-    <div class="container footer-inner">
-      <span>© <span id="current-year">2026</span> Lexicon Project</span>
-      <span>Byggt med HTML, CSS och JavaScript.</span>
-      <a href="https://github.com/jakobozmen/Lexicon_Project" target="_blank" rel="noopener noreferrer">GitHub ↗</a>
-    </div>
+    <div class="container footer"><a href="#start" class="footer-brand">JAKOB ÖZMEN <span>/ IT &amp; UTVECKLING</span></a><p>© <span id="year">2026</span> Jakob Özmen · HTML, CSS &amp; JavaScript</p><a href="https://github.com/jakobozmen" target="_blank" rel="noopener noreferrer">GitHub ↗</a></div>
   </footer>
 </body>
 </html>
